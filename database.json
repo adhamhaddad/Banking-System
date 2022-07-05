@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "banking_system",
+        "user": "adham",
+        "password": "pass123"
+    },
+    "test": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "banking_system_test",
+        "user": "adham",
+        "password": "pass123"
+    }
+}

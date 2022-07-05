@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "banking_system",
+            "username": "adham",
+            "password": "pass123",
+            "name": "Banking"
+        }
+    ]
+}
