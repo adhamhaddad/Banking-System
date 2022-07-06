@@ -22,7 +22,7 @@ export const getAllCustomers = async (req: Request, res: Response, next: NextFun
         const response = await customer.getAllCustomers();
         res.status(200).json({
             status: true,
-            data: {...response},
+            data: {response},
             message: "Retrieved all users successfully!"
         });
     } catch (err) {

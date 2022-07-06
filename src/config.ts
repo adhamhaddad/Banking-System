@@ -19,3 +19,6 @@ export const client = new Pool({
     user: USER,
     password: PASSWORD
 });
+export const config = {
+    port: Number(PORT)
+}

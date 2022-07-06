@@ -23,7 +23,8 @@ class Customer {
             const connection = await client.connect();
             const sql = 'INSERT INTO customers (id, username, email, current_balance) VALUES($1, $2, $3, $4) RETURNING *';
             const result = await connection.query(sql, [
-                generateID(u.id),
+                // generateID(u.id),
+                u.id,
                 u.username,
                 u.email,
                 u.current_balance

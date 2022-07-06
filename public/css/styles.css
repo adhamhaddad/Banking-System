@@ -47,6 +47,22 @@ nav ul li a:hover {
     transition: background .5s ease-in-out ;
 }
 
+
+h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+table {
+    margin: 20px auto 0;
+    width: 500px;
+}
+table tr {
+    height: 50px;
+    background-color: var(--base-grey);
+    color: #FFF;
+    text-align: center;
+}
+
 button {
     color: var(--base-grey);
     background-color: #FFF;
@@ -59,7 +75,7 @@ button {
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 button:hover {
     color: #FFF;
