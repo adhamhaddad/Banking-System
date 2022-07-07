@@ -6,5 +6,8 @@ CREATE TABLE Customers (
 );
 
 CREATE TABLE Transfers (
-    id SERIAL PRIMARY KEY
+    id INTEGER,
+    email VARCHAR(255),
+    money VARCHAR(255),
+    credit VARCHAR(255)
 );

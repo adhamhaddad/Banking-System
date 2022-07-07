@@ -1,5 +1,5 @@
 import { client } from '../config';
-import User from '../types/Customer.Types';
+import Customer from '../types/Customer.Types';
 
 const generateID = async (id: number): Promise<number> => {
     try {
@@ -15,10 +15,10 @@ const generateID = async (id: number): Promise<number> => {
     }
 }
 
-class Customer {
+class Customers {
     // CRUD Operations Here ..
     // Create
-    async createCustomer(u: User): Promise<User> {
+    async createCustomer(u: Customer): Promise<Customer> {
         try {
             const connection = await client.connect();
             const sql = 'INSERT INTO customers (id, username, email, current_balance) VALUES($1, $2, $3, $4) RETURNING *';
@@ -37,7 +37,7 @@ class Customer {
     }
 
     // Read All
-    async getAllCustomers(): Promise<User[]> {
+    async getAllCustomers(): Promise<Customer[]> {
         try {
             const connection = await client.connect();
             const sql = 'SELECT * FROM customers';
@@ -50,7 +50,7 @@ class Customer {
     }
 
     // Get By Id
-    async getCustomer(id: string): Promise<User[]> {
+    async getCustomer(id: string): Promise<Customer[]> {
         try {
             const connection = await client.connect();
             const sql = 'SELECT * FROM customers WHERE id=($1)';
@@ -63,7 +63,7 @@ class Customer {
     }
 
     // Update By Id
-    async updateCustomer(id: string, u: User): Promise<User[]> {
+    async updateCustomer(id: string, u: Customer): Promise<Customer[]> {
         try {
             const connection = await client.connect();
             const sql = `UPDATE customers SET id=$1, username=$2, email=$3, current_balance=$4 WHERE id=${id} RETURNING *`;
@@ -81,7 +81,7 @@ class Customer {
     }
 
     // Delete By Id
-    async deleteCustomer(id: string): Promise<User[]> {
+    async deleteCustomer(id: string): Promise<Customer[]> {
         try {
             const connection = await client.connect();
             const sql = 'DELETE FROM customers * WHERE id=($1) RETURNING *';
@@ -94,4 +94,4 @@ class Customer {
     }
 }
 
-export default Customer;
+export default Customers;

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import Customer from '../models/Customer';
+import Customer from '../models/Customers';
 
 const customer = new Customer();
 // Create

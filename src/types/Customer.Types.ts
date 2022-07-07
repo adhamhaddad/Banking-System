@@ -1,7 +1,7 @@
-type User = {
+type Customer = {
     id: number;
     username: string;
     email: string;
     current_balance: number;
 }
-export default User;
+export default Customer;

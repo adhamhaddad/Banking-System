@@ -8,3 +8,9 @@ export const home = (_req: Request, res: Response): void => {
         if (err) console.log(err.message);
     });
 }
+
+export const payment = (req: Request, res: Response) => {
+    res.status(200).sendFile(`${publicDir}/html/payment.html`, (err): void => {
+        if (err) console.log(err.message);
+    });
+}
