@@ -1,6 +1,7 @@
 type Transfer = {
-    id: number;
-    email: string;
+    id: string;
+    sender: string;
+    receiver: string;
     money: string;
     credit: string;
 }

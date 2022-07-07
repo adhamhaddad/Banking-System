@@ -7,16 +7,18 @@ import { checkPayment } from '../../middlewares/transfer';
 const routes: Application = Router();
 
 // Routes Requests
-routes.post('/users', customer.createCustomer);
-routes.get('/users', customer.getAllCustomers);
-routes.get('/users/:id', customer.getCustomer);
-routes.patch('/users/:id', customer.updateCustomer);
-routes.delete('/users/:id', customer.deleteCustomer);
+routes.post('/customer', customer.createCustomer);
+routes.get('/customer', customer.getAllCustomers);
+routes.get('/customer/:id', customer.getCustomer);
+routes.patch('/customer/:id', customer.updateCustomer);
+routes.delete('/customer/:id', customer.deleteCustomer);
 
 routes.get('/home', server.home);
 routes.get('/payment', server.payment);
 
 routes.post('/transfer', checkPayment, transfer.setTransfers);
 routes.get('/transfer', transfer.getTrasnfers);
+routes.delete('/transfer/:id', transfer.deleteTransfers);
+
 
 export default routes;

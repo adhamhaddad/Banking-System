@@ -1,7 +1,7 @@
 type Customer = {
-    id: number;
+    id: string;
     username: string;
     email: string;
-    current_balance: number;
+    current_balance: string;
 }
 export default Customer;

@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import Mail from "nodemailer/lib/mailer";
 
 export const checkPayment = (req: Request, res: Response, next: NextFunction) => {
     // Payment Checks

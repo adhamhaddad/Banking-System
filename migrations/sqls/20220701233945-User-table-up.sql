@@ -1,13 +1,14 @@
 CREATE TABLE Customers (
-    id INTEGER,
+    id VARCHAR(255),
     username VARCHAR(255),
     email VARCHAR(255),
-    current_balance INTEGER
+    current_balance VARCHAR(255)
 );
 
 CREATE TABLE Transfers (
-    id INTEGER,
-    email VARCHAR(255),
+    id VARCHAR(255),
+    sender VARCHAR(255),
+    receiver VARCHAR(255),
     money VARCHAR(255),
     credit VARCHAR(255)
 );
