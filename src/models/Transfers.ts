@@ -5,13 +5,12 @@ class Transfers {
     async setTransfers(transfer: Transfer): Promise<Transfer> {
         try {
             const connection = await client.connect();
-            const sql = 'INSERT INTO transfers (id, sender, receiver, money, credit) VALUES ($1, $2, $3, $4, $5) RETURNING *';
+            const sql = 'INSERT INTO transfers (id, sender, receiver, balance) VALUES ($1, $2, $3, $4) RETURNING *';
             const result = await connection.query(sql, [
                 uuidv4(),
                 transfer.sender,
                 transfer.receiver,
-                transfer.money,
-                transfer.credit
+                transfer.balance
             ]);
             connection.release();
             return result.rows[0];

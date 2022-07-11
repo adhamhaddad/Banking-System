@@ -21,20 +21,13 @@ nav {
     height: 60px;
     background-color: var(--base-grey);
 }
-nav ul {
-    width: 50%;
-    height: 100%;
-    display: flex;
-}
+nav ul {height: 100%; display: flex}
 
-nav ul li {
-    display: inline-block;
-    height: 100%;
-}
+nav ul li {display: inline-block; height: 100%}
 nav ul li a {
     display: block;
-    width: 120px;
     height: 100%;
+    padding: 0 15px;
     text-align: center;
     line-height: 60px;
     color: #FFF;
@@ -46,27 +39,18 @@ nav ul li a:hover {
     background-color: #444;
     transition: background .5s ease-in-out ;
 }
-
-
-h3 {
-    text-align: center;
-    padding: 10px 0;
-}
-table {
-    margin: 20px auto 0;
-    width: 500px;
-}
 table tr {
     height: 50px;
     background-color: var(--base-grey);
     color: #FFF;
     text-align: center;
 }
-
+table tr td {padding: 10px 20px}
 button {
     color: var(--base-grey);
     background-color: #FFF;
-    width: 100px;
+    /* width: 100px; */
+    padding: 5px 10px;
     height: 40px;
     border: 1px solid var(--base-grey);
     display: block;

@@ -17,14 +17,14 @@ const generateID = async (id: number): Promise<number> => {
 }
 
 class Customers {
-    // CRUD Operations Here ..
     // Create
     async createCustomer(u: Customer): Promise<Customer> {
         try {
             const connection = await client.connect();
             const sql = 'INSERT INTO customers (id, username, email, current_balance) VALUES($1, $2, $3, $4) RETURNING *';
             const result = await connection.query(sql, [
-                uuidv4(),
+                // uuidv4(),
+                u.id,
                 u.username,
                 u.email,
                 u.current_balance

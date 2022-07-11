@@ -3,6 +3,8 @@ import helmet from 'helmet';
 import cors from 'cors';
 import router from './router/index';
 import { config } from './config';
+import logger from './middlewares/logger';
+import * as server from './controllers/Server.Controllers';
 
 // Express App
 const app: Application = express();
@@ -17,6 +19,9 @@ app.use(express.static('public'));
 
 // Requests
 app.use('/', router);
+app.get('/', logger, server.home);
+app.get('/viewCustomers', logger, server.customers);
+app.get('/viewTransfers', logger, server.transfers);
 
 // App Server
 app.listen(port, (): void => console.log(`Server Listening on http://localhost:${port}`))

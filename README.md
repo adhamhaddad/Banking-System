@@ -26,8 +26,13 @@ Customers table have basic fields:
 - **email**
 - **current_balance**
 
-Transfers table have all transfers records happend
-
+ table have all 
+Transfers table have basic fields records happend:
+- **id**
+- **sender**
+- **receiver**
+- **money**
+- **credit**
 ### Code Styles
 This project uses `eslint` and `prettier`. all configurations for this project inside `package.json` file.
 

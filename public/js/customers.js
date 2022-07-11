@@ -1,9 +1,8 @@
 const table = document.querySelector('main table tbody');
-const butt = document.querySelector('button');
 
 // Generate Data
-const donate = () => {
-    getUsers('http://localhost:8000/api/users');
+const viewAllCustomers = () => {
+    getUsers('http://localhost:8000/api/customer');
 }
 
 // GET Request
@@ -21,11 +20,10 @@ const getUsers = async (url) => {
                 </tr>
             `;
         });
-        table.innerHTML = newData;
+        table.innerHTML = newData.join(' ');
     } catch (err) {
         console.log(`Error. ${err.message}`);
     }
 }
 
-// Donate Button
-butt.addEventListener('click', donate);
+viewAllCustomers();

@@ -16,12 +16,12 @@ export const setTransfers = async (req: Request, res: Response, next: NextFuncti
     }
 }
 
-export const getTrasnfers = async (req: Request, res: Response, next: NextFunction) => {
+export const getAllTrasnfers = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const response = await transfer.getTrasnfers();
         res.status(200).json({
             status: true,
-            data: {...response},
+            data: {response},
             message: 'Get transfers successfully!'
         });
     } catch (err) {

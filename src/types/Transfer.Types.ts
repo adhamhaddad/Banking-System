@@ -2,7 +2,6 @@ type Transfer = {
     id: string;
     sender: string;
     receiver: string;
-    money: string;
-    credit: string;
+    balance: string;
 }
 export default Transfer;

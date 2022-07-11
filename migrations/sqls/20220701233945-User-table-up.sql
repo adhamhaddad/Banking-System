@@ -9,6 +9,5 @@ CREATE TABLE Transfers (
     id VARCHAR(255),
     sender VARCHAR(255),
     receiver VARCHAR(255),
-    money VARCHAR(255),
-    credit VARCHAR(255)
+    balance VARCHAR(255)
 );
