@@ -1,7 +1,7 @@
 # Banking-System
 #
 ## Description
-A simple dynamic website which has some of specs that transfers money ...
+A simple dynamic website with dummy data in the database from 1 to 10 users is saved in the `Customers` table. Users can also transfer money and all transfers will record in the `Transfers` table.
 
 ## Installations
 
@@ -15,7 +15,7 @@ A simple dynamic website which has some of specs that transfers money ...
 `yarn start`
 
 ### Functionality
-- User can transfer money and save the transfers in the `Transfers` table in `banking_system` database.
+- User can transfer money and save the transfers in the `Transfers` table.
 #### PostgreSQL Database: **`banking_system`**
 1) **Customers**
 2) **Trasnfers**
@@ -26,13 +26,11 @@ Customers table have basic fields:
 - **email**
 - **current_balance**
 
- table have all 
 Transfers table have basic fields records happend:
 - **id**
 - **sender**
 - **receiver**
-- **money**
-- **credit**
+- **balance**
 ### Code Styles
 This project uses `eslint` and `prettier`. all configurations for this project inside `package.json` file.
 
