@@ -31,8 +31,6 @@ Transfers table have basic fields records happend:
 - **sender**
 - **receiver**
 - **balance**
-### Code Styles
-This project uses `eslint` and `prettier`. all configurations for this project inside `package.json` file.
 
 ## Available Scripts
 
@@ -44,12 +42,6 @@ Open `http://localhost:8000/`
 ##### `npm run dev` or `yarn dev`
 Runs the app in the development mode.
 The page will reload automatically if you make edits.
-##### `npm run format` or `yarn format`
-Will format by prettier and will also see if any lint errors in the console.
-
-##### `npm run test` or `yarn test`
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
 
 ##### `npm run build` or `yarn build`
 Builds the app for production to the dist folder.
@@ -64,5 +56,4 @@ Make migrations down on the database
 - **Node.js**
 - **Express.js**
 - **TypeScript**
-- **Jasmine**
 - **PostgreSQL**
