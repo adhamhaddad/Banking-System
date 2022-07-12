@@ -20,6 +20,7 @@ app.use(express.static('public'));
 // Requests
 app.use('/', router);
 app.get('/', logger, server.home);
+app.get('/transfer', logger, server.transactions);
 app.get('/viewCustomers', logger, server.customers);
 app.get('/viewTransfers', logger, server.transfers);
 

@@ -39,6 +39,9 @@ nav ul li a:hover {
     background-color: #444;
     transition: background .5s ease-in-out ;
 }
+table {
+    margin: 10px auto;
+}
 table tr {
     height: 50px;
     background-color: var(--base-grey);
@@ -49,7 +52,7 @@ table tr td {padding: 10px 20px}
 button {
     color: var(--base-grey);
     background-color: #FFF;
-    /* width: 100px; */
+    width: 100%;
     padding: 5px 10px;
     height: 40px;
     border: 1px solid var(--base-grey);
@@ -67,4 +70,25 @@ button:hover {
     transition-property: color, background;
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
+}
+
+
+
+/* Transactions Styles */
+
+form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+}
+form label {
+    text-transform: capitalize;
+    padding: 5px 0;
+    display: block;
+}
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--base-grey);
 }

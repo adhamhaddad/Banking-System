@@ -20,3 +20,9 @@ export const transfers = (req: Request, res: Response) => {
         if (err) console.log(err.message);
     })
 }
+
+export const transactions = (_req: Request, res: Response) => {
+    res.status(200).sendFile(`${publicDir}/transactions.html`, (err): void => {
+        if (err) console.log(err.message);
+    })
+}

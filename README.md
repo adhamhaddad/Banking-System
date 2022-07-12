@@ -37,11 +37,13 @@ This project uses `eslint` and `prettier`. all configurations for this project i
 ## Available Scripts
 
 In the project directory, you can run:
+##### `npm run start` or `yarn start`
+Build and runs the app in the clients mode.
+Open `http://localhost:8000/`
 
 ##### `npm run dev` or `yarn dev`
 Runs the app in the development mode.
 The page will reload automatically if you make edits.
-
 ##### `npm run format` or `yarn format`
 Will format by prettier and will also see if any lint errors in the console.
 
@@ -52,9 +54,6 @@ See the section about running tests for more information.
 ##### `npm run build` or `yarn build`
 Builds the app for production to the dist folder.
 It's format TypeScript to JavaScript
-
-##### `npm run start` or `yarn start`
-Build and runs the app in the clients mode.
 
 #### `npm run migrate:up` or `yarn migrate:up`
 Make migrations up on the database

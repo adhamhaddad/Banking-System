@@ -31,27 +31,13 @@ export const getAllCustomers = async (req: Request, res: Response, next: NextFun
 }
 
 // Get By Id
-export const getCustomer = async (req: Request, res: Response, next: NextFunction) => {
+export const getCurrentBalance = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const response = await customer.getCustomer(req.params.id);
+        const response = await customer.getCurrentBalance(req.body.id);
         res.status(200).json({
             status: true,
-            data: {...response},
+            data: {response},
             message: "Retrieved user successfully!"
-        });
-    } catch (err) {
-        next(err);
-    }
-}
-
-// Update By Id
-export const updateCustomer = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const response = await customer.updateCustomer(req.params.id, req.body);
-        res.status(200).json({
-            status: true,
-            data: {...response},
-            message: "User updated successfully!"
         });
     } catch (err) {
         next(err);

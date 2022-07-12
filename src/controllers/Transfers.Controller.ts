@@ -5,12 +5,8 @@ const transfer = new Transfers();
 
 export const setTransfers = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const response = await transfer.setTransfers(req.body);
-        res.status(201).json({
-            status: true,
-            data: {...response},
-            message: 'Set transfers successfully!'
-        });
+        await transfer.setTransfers(req.body);
+        next();
     } catch (err) {
         next(err);
     }
@@ -24,6 +20,7 @@ export const getAllTrasnfers = async (req: Request, res: Response, next: NextFun
             data: {response},
             message: 'Get transfers successfully!'
         });
+        next();
     } catch (err) {
         next(err);
     }
@@ -40,4 +37,8 @@ export const deleteTransfers = async (req: Request, res: Response, next: NextFun
     } catch (err) {
         next(err);
     }
+}
+
+export const transactions =  (_req: Request, res: Response) => {
+    res.status(200).redirect('http://localhost:8000/transfer');
 }

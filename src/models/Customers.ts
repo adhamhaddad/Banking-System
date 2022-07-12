@@ -2,20 +2,11 @@ import { client } from '../config';
 import Customer from '../types/Customer.Types';
 import { v4 as uuidv4 } from 'uuid';
 
-const generateID = async (id: number): Promise<number> => {
-    try {
-        const connection = await client.connect();
-        const sql = 'SELECT * FROM customers ORDER BY id DESC LIMIT 1';
-        const result = await connection.query(sql, [id]);
-        connection.release();
-        console.log(result.rows)
-        let newId = Number(result.rows) +1;
+const generateID = (id: number) => {
+        let newId = uuidv4();
+        console.log(newId)
         return newId;
-    } catch (err) {
-        throw new Error(`ID Generation failed! Error. ${(err as Error).message}`);
-    }
 }
-
 class Customers {
     // Create
     async createCustomer(u: Customer): Promise<Customer> {
@@ -50,11 +41,11 @@ class Customers {
     }
 
     // Get By Id
-    async getCustomer(id: string): Promise<Customer[]> {
+    async getCurrentBalance(e: string): Promise<Customer[]> {
         try {
             const connection = await client.connect();
-            const sql = 'SELECT * FROM customers WHERE id=($1)';
-            const result = await connection.query(sql, [id]);
+            const sql = 'SELECT current_balance FROM customers WHERE email=($1)';
+            const result = await connection.query(sql, [e]);
             connection.release();
             return result.rows[0];
         } catch (err) {
@@ -63,16 +54,11 @@ class Customers {
     }
 
     // Update By Id
-    async updateCustomer(id: string, u: Customer): Promise<Customer[]> {
+    async updateCustomer(e: string, b: string): Promise<Customer[]> {
         try {
             const connection = await client.connect();
-            const sql = `UPDATE customers SET id=$1, username=$2, email=$3, current_balance=$4 WHERE id=${id} RETURNING *`;
-            const result = await connection.query(sql, [
-                u.id,
-                u.username,
-                u.email,
-                u.current_balance,
-            ]);
+            const sql = `UPDATE customers SET current_balance=$2 WHERE email=($1) RETURNING *`;
+            const result = await connection.query(sql, [e, b]);
             connection.release();
             return result.rows[0];
         } catch (err) {

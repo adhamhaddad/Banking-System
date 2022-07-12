@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banking System - Home</title>
+    <title>Banking System - Transfer</title>
     <link rel="icon" href="./icons/bank.svg">
     <link rel="stylesheet" href="./css/styles.css"/>
 </head>
@@ -38,14 +38,21 @@
         </ul>
     </nav>
     <main>
-        <h1>This is Test</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda reprehenderit, vel perferendis consectetur eligendi optio quis illum corrupti laborum omnis aliquid fugit debitis ullam perspiciatis repudiandae delectus dolore id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda reprehenderit, vel perferendis consectetur eligendi optio quis illum corrupti laborum omnis aliquid fugit debitis ullam perspiciatis repudiandae delectus dolore id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda reprehenderit, vel perferendis consectetur eligendi optio quis illum corrupti laborum omnis aliquid fugit debitis ullam perspiciatis repudiandae delectus dolore id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda reprehenderit, vel perferendis consectetur eligendi optio quis illum corrupti laborum omnis aliquid fugit debitis ullam perspiciatis repudiandae delectus dolore id.
-        </p>
+        <form action="/api/transfer" method="POST">
+            
+            <label for="sender">sender id</label>
+            <input type="email" placeholder="Enter sender email" name="sender" id="sender">
+
+            <label for="receiver">receiver id</label>
+            <input type="email" placeholder="Enter receiver email" name="receiver" id="receiver">
+
+            <label for="balance">balance</label>
+            <input type="text" placeholder="Enter balance" name="balance" id="balance">
+
+            <button type="submit">send</button>
+        </form>
     </main>
-    <script src="./js/app.js"></script>
+
+    <script src="./js/transactions.js"></script>
 </body>
 </html>
