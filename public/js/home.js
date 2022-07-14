@@ -1,0 +1,1 @@
+document.querySelector('nav ul li a#home').style.borderBottom = "4px solid #FFF";

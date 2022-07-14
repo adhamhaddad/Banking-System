@@ -1,5 +1,5 @@
 :root {
-    --base-grey: #222;
+    --base-grey: #212121;
 }
 * {
     padding: 0;
@@ -14,6 +14,17 @@
     box-sizing: border-box;
     list-style-type: none;
 }
+body {
+    background-image: url('../images/visa.jpg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFF;
+
+}
 /* Styles */
 nav {
     top: 0;
@@ -21,7 +32,17 @@ nav {
     height: 60px;
     background-color: var(--base-grey);
 }
-nav ul {height: 100%; display: flex}
+nav div.logo {
+    color: #FFF;
+    float: left;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+nav ul {height: 100%; display: flex; float: right}
 
 nav ul li {display: inline-block; height: 100%}
 nav ul li a {
@@ -39,8 +60,35 @@ nav ul li a:hover {
     background-color: #444;
     transition: background .5s ease-in-out ;
 }
-table {
-    margin: 10px auto;
+main {
+    width: 1080px;
+    margin: auto;
+}
+h1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 50px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 30px 0;
+    text-shadow: 1px 3px 3px var(--base-grey);
+    text-transform: capitalize;
+}
+h2 {
+    margin: 0 0 40px;
+    width: 40%;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-shadow: 1px 3px 3px var(--base-grey);
+}
+p {
+    width: 40%;
+    line-height: 1.6;
+    text-shadow: 1px 3px 3px var(--base-grey);
+}
+
+table {margin: 10px auto;
+    box-shadow: 0 0 10px 10px var(--base-grey);
+
 }
 table tr {
     height: 50px;
@@ -48,8 +96,16 @@ table tr {
     color: #FFF;
     text-align: center;
 }
-table tr td {padding: 10px 20px}
-button {
+table thead tr td {
+    padding: 0 20px;
+    height: 50px;
+}
+table tbody tr td {
+    padding: 0 20px;
+    height: 50px;
+    text-align: left;
+}
+.btn {
     color: var(--base-grey);
     background-color: #FFF;
     width: 100%;
@@ -63,8 +119,9 @@ button {
     transition-timing-function: ease-in-out;
     cursor: pointer;
     margin: 10px auto;
+    font-weight: bold;
 }
-button:hover {
+.btn:hover {
     color: #FFF;
     background-color: var(--base-grey);
     transition-property: color, background;
@@ -72,23 +129,25 @@ button:hover {
     transition-timing-function: ease-in-out;
 }
 
-
-
 /* Transactions Styles */
 
 form {
     width: 400px;
     margin: 20px auto;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 10px var(--base-grey);
 }
 form label {
     text-transform: capitalize;
     padding: 5px 0;
     display: block;
 }
-form input {
+form input, select {
     display: block;
     width: 100%;
-    padding: 10px;
+    height: 40px;
+    padding: 10px 5px;
     border: 1px solid var(--base-grey);
+    border-radius: 0
 }

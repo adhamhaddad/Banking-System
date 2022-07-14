@@ -1,13 +1,11 @@
 import { client } from '../config';
 import Transfer from '../types/Transfer.Types';
-import { v4 as uuidv4 } from 'uuid'
 class Transfers {
     async setTransfers(transfer: Transfer): Promise<Transfer> {
         try {
             const connection = await client.connect();
-            const sql = 'INSERT INTO transfers (id, sender, receiver, balance) VALUES ($1, $2, $3, $4) RETURNING *';
+            const sql = 'INSERT INTO transfers (sender, receiver, balance) VALUES ($1, $2, $3) RETURNING *';
             const result = await connection.query(sql, [
-                uuidv4(),
                 transfer.sender,
                 transfer.receiver,
                 transfer.balance

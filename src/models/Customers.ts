@@ -1,21 +1,12 @@
 import { client } from '../config';
 import Customer from '../types/Customer.Types';
-import { v4 as uuidv4 } from 'uuid';
-
-const generateID = (id: number) => {
-        let newId = uuidv4();
-        console.log(newId)
-        return newId;
-}
 class Customers {
     // Create
     async createCustomer(u: Customer): Promise<Customer> {
         try {
             const connection = await client.connect();
-            const sql = 'INSERT INTO customers (id, username, email, current_balance) VALUES($1, $2, $3, $4) RETURNING *';
+            const sql = 'INSERT INTO customers (username, email, current_balance) VALUES($1, $2, $3) RETURNING *';
             const result = await connection.query(sql, [
-                // uuidv4(),
-                u.id,
                 u.username,
                 u.email,
                 u.current_balance

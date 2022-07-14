@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banking System - Transfer</title>
+    <title>Banking System - Home</title>
     <link rel="icon" href="./icons/bank.svg">
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css"/>
@@ -16,13 +16,13 @@
         </div>
         <ul>
             <li>
-                <a href="http://localhost:8000/">
+                <a href="http://localhost:8000/" id="home">
                     <i class="fa-solid fa-house"></i>
-                    <span>home</span>
+                    <span id="home">home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8000/transfer" id="transfer">
+                <a href="http://localhost:8000/transfer">
                     <i class="fa-solid fa-right-left"></i>
                     <span>Transfer</span>
                 </a>
@@ -42,21 +42,11 @@
         </ul>
     </nav>
     <main>
-        <form action="/api/transfer" method="POST">
-            
-            <label for="sender">sender email</label>
-            <select name="sender" id="sender"></select>
-
-            <label for="receiver">receiver email</label>
-            <select name="receiver" id="receiver"></select>
-
-            <label for="balance">balance</label>
-            <input type="text" placeholder="Enter balance" name="balance" id="balance">
-
-            <button class='btn' type="submit">send</button>
-        </form>
+        <h1>welcome to our bank</h1>
+        <h2>your flexibility, our excellence</h2>
+        <p>Manage everything directly and easy transfer money. set your payment limit, send money to your friends, give monthly salary to your employees. All in real-time. Happy journey!</p>
     </main>
     <script src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <script src="./js/transactions.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 </html>

@@ -25,6 +25,6 @@ app.get('/viewCustomers', logger, server.customers);
 app.get('/viewTransfers', logger, server.transfers);
 
 // App Server
-app.listen(port, (): void => console.log(`Server Listening on http://localhost:${port}`))
+app.listen(port, (): void => console.log(`Server Listening on http://localhost:${port}😄`))
 
 export default app;

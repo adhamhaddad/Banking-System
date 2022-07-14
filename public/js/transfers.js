@@ -20,9 +20,10 @@ const getData = async (url) => {
                 </tr>
             `;
         });
-        table.innerHTML = newData.join(' ');
+        table.innerHTML = newData.join('');
     } catch (err) {
         console.log(`Error. ${err.message}`);
     }
 }
 viewAllTransfers();
+document.querySelector('nav ul li a#transfers').style.borderBottom = "4px solid #FFF";

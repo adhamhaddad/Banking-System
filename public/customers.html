@@ -6,32 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking System - Customers</title>
     <link rel="icon" href="./icons/bank.svg">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
     <nav>
+        <div class="logo">
+            <h3>bank system</h3>
+        </div>
         <ul>
             <li>
                 <a href="http://localhost:8000/">
-                    <i class="fa-solid fa-home"></i>
+                    <i class="fa-solid fa-house"></i>
                     <span>home</span>
                 </a>
             </li>
             <li>
                 <a href="http://localhost:8000/transfer">
-                    <i class="fa-solid fa-home"></i>
+                    <i class="fa-solid fa-right-left"></i>
                     <span>Transfer</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8000/viewCustomers">
-                    <i class="fa-solid fa-home"></i>
+                <a href="http://localhost:8000/viewCustomers" id="customers">
+                    <i class="fa-solid fa-users"></i>
                     <span>view all customers</span>
                 </a>
             </li>
             <li>
                 <a href="http://localhost:8000/viewTransfers">
-                    <i class="fa-solid fa-home"></i>
+                    <i class="fa-solid fa-database"></i>
                     <span>view all transfers</span>
                 </a>
             </li>
@@ -42,7 +46,7 @@
             <thead>
                 <tr>
                     <td>ID</td>
-                    <td>Username</td>
+                    <td>Username</td> 
                     <td>Email</td>
                     <td>Current Balance</td>
                 </tr>
@@ -51,6 +55,7 @@
         </table>
         
     </main>
+    <script src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <script src="./js/customers.js"></script>
 </body>
 </html>

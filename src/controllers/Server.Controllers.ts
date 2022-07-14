@@ -4,7 +4,7 @@ import path from 'path';
 const publicDir: string = path.join(`${__dirname}/../../public`);
 
 export const home = (_req: Request, res: Response): void => {
-    res.status(200).sendFile(`${publicDir}/index.html`, (err): void => {
+    res.status(200).sendFile(`${publicDir}/home.html`, (err): void => {
         if (err) console.log(err.message);
     });
 }

@@ -20,10 +20,11 @@ const getUsers = async (url) => {
                 </tr>
             `;
         });
-        table.innerHTML = newData.join(' ');
+        table.innerHTML = newData.join('');
     } catch (err) {
         console.log(`Error. ${err.message}`);
     }
 }
 
 viewAllCustomers();
+document.querySelector('nav ul li a#customers').style.borderBottom = "4px solid #FFF";
