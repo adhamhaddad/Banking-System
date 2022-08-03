@@ -5,7 +5,7 @@ class Customers {
     async createCustomer(u: Customer): Promise<Customer> {
         try {
             const connection = await client.connect();
-            const sql = 'INSERT INTO customers (username, email, current_balance) VALUES($1, $2, $3) RETURNING *';
+            const sql = 'INSERT INTO customers (username, email, current_balance) VALUES ($1, $2, $3) RETURNING *';
             const result = await connection.query(sql, [
                 u.username,
                 u.email,
